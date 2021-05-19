@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-11-05 Thu 15:04 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Batch Notes</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Vincent" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Batch Notes</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org7e3d48b">1. Using Batch</a></li>
+<li><a href="#org3944dba">2. Making the Case for the az cli tool</a></li>
+<li><a href="#org34687da">3. A CLI Tutorial</a></li>
+<li><a href="#org8dec3c9">4. Notes About Usage</a></li>
+<li><a href="#orge5b1ed4">5. C# version</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7e3d48b" class="outline-2">
+<h2 id="org7e3d48b"><span class="section-number-2">1</span> Using Batch</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Batch has a few interfaces.
+</p>
+
+<ol class="org-ol">
+<li>You can use it via the Azure Portal.</li>
+<li>via a C# interface</li>
+<li>Or via the az command line application</li>
+</ol>
+
+<p>
+Of these three the first leaves some things to be desired. To explain
+why it may make sense to briefly consider a 
+</p>
+
+<blockquote>
+<p>
+Glossary
+</p>
+<ol class="org-ol">
+<li>pool - a collection of cores on which your batch tasks actually run</li>
+<li>job - a collection of tasks unified by some shared parameters</li>
+<li>task - some concrete computation which you want to distribute over the pool</li>
+<li>application - a group of files (typically a script or app) associated with a pool</li>
+</ol>
+</blockquote>
+
+<p>
+Other notes:
+</p>
+
+<p>
+The az command line utility speaks almost exclusively in JSON. I've
+used the <a href="https://stedolan.github.io/jq/">jq</a> utility here and there to extract fields from the results.
+</p>
+
+<p>
+Typical usage for Batch involves uploading the data to a storage
+account location, creating a job and then creating one or more
+tasks. These tasks write to the same storage location they read from
+and then we fetch the results.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3944dba" class="outline-2">
+<h2 id="org3944dba"><span class="section-number-2">2</span> Making the Case for the az cli tool</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Of the three choices given above, I'd like to make the case that its
+best for our users to be trained to use the az cli tool. While the
+user interface presented by the portal may offer some arguably
+usability advantages, it is difficult to use it to launch a lot of
+tasks of a similar nature.
+</p>
+
+<p>
+The CLI and the C# interface expose this possibility, but C# is
+outside the purview of most of our users (I would wager). The CLI can
+be scripted with rudimentary bash scripting skills which I expect most
+HPC users to have.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org34687da" class="outline-2">
+<h2 id="org34687da"><span class="section-number-2">3</span> A CLI Tutorial</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+We always begin by signing into Azure. This is a potential pain point
+in a variety of ways.  
+</p>
+
+<ol class="org-ol">
+<li>Users may be confused about which credentials to use given that we
+have have just had them log into their machine with a different set
+than their sso</li>
+<li>I'm not actually sure how their batch credentials will align with
+either given the need to separate out batch accounts</li>
+<li>We'll need to restrict the IP addresses which we allow login from
+to keep people from trying to connect via their own installations
+of the Azure CLI</li>
+</ol>
+
+<p>
+In any case, we log in by saying
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">az login
+</pre>
+</div>
+
+<p>
+Which results in something <span class="underline">like</span> this:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">To sign<span style="color: #a020f0;"> in</span>, use a web browser to open the page https://microsoft.com/devicelogin and enter the code &lt;some-key&gt; to authenticate.
+</pre>
+</div>
+
+<p>
+When you go through the single sign on you should see something like this:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">[
+  {
+    <span style="color: #8b2252;">"cloudName"</span>: <span style="color: #8b2252;">"AzureCloud"</span>,
+    <span style="color: #8b2252;">"id"</span>: <span style="color: #8b2252;">"********-****-****-****-************"</span>,
+    <span style="color: #8b2252;">"isDefault"</span>: true,
+    <span style="color: #8b2252;">"name"</span>: <span style="color: #8b2252;">"UNC_RC_BACPAC_AAD"</span>,
+    <span style="color: #8b2252;">"state"</span>: <span style="color: #8b2252;">"Enabled"</span>,
+    <span style="color: #8b2252;">"tenantId"</span>: <span style="color: #8b2252;">"********-****-****-****-************"</span>,
+    <span style="color: #8b2252;">"user"</span>: {
+      <span style="color: #8b2252;">"name"</span>: <span style="color: #8b2252;">"toups@ad.unc.edu"</span>,
+      <span style="color: #8b2252;">"type"</span>: <span style="color: #8b2252;">"user"</span>
+    }
+  }
+]
+</pre>
+</div>
+
+<p>
+This is a surprisingly easy way to get set up. We can now interact with batch.
+</p>
+
+<p>
+To interact with batch itself we need to log in again to the batch
+service.  James has created an account for us to test with and we log
+in like this:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">az batch account login --resource-group bacpacbatch --name kubetesting10192003ba
+<span style="color: #b22222;"># </span><span style="color: #b22222;">once we have logged in we can list the available pools</span>
+az batch pool list | jq <span style="color: #8b2252;">'.[].id'</span>
+</pre>
+</div>
+
+<p>
+In this case there is just one. This is an ok representation of the
+actual state of affairs that our users will meet - they will have a
+pre-created batch user and pool.
+</p>
+
+<p>
+Now we want to create a job, which is sort of like a <span class="underline">container</span> for
+tasks.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh"><span style="color: #483d8b;">export</span> <span style="color: #a0522d;">POOL</span>=vincent
+az batch job delete --job-id test-job 
+az batch job create --id test-job --pool-id $<span style="color: #a0522d;">POOL</span>
+az batch job list | jq <span style="color: #8b2252;">'.[].id'</span>
+</pre>
+</div>
+
+<p>
+Now that we have our job a simple embarassingly parallel job is
+launched like this:
+</p>
+
+<p>
+(we are pretending to mine bitcoin here).
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh"><span style="color: #a020f0;">for</span> i<span style="color: #a020f0;"> in</span> $(<span style="color: #ff00ff;">seq</span> 1 10); <span style="color: #a020f0;">do</span> 
+    az batch task create <span style="color: #8b2252;">\</span>
+    --task-id test-job-task-$<span style="color: #a0522d;">i</span> <span style="color: #8b2252;">\</span>
+    --job-id test-job <span style="color: #8b2252;">\</span>
+    --command-line <span style="color: #8b2252;">"/bin/bash -c 'od -A n -t d -N 100000 /dev/urandom | md5sum'"</span> | grep creationTime
+<span style="color: #a020f0;">done</span>
+</pre>
+</div>
+
+<p>
+If we wanted to kill these tasks we could say:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh"><span style="color: #a020f0;">for</span> i<span style="color: #a020f0;"> in</span> $(<span style="color: #ff00ff;">seq</span> 1 10); <span style="color: #a020f0;">do</span> 
+    az batch task stop <span style="color: #8b2252;">\</span>
+    --task-id my-job-$<span style="color: #a0522d;">i</span> <span style="color: #8b2252;">\</span>
+    --job-id test-job 
+<span style="color: #a020f0;">done</span>
+</pre>
+</div>
+
+<p>
+(Output is pretty voluminous and so we've ellided it here).
+</p>
+
+<p>
+I've intentionally chosen a task which takes a little while to
+complete.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">az batch task show --job-id test-job --task-id test-job-task-1 | jq <span style="color: #8b2252;">".executionInfo"</span>
+</pre>
+</div>
+
+<p>
+Now we just wait for it to finish. We could poll the tasks via a small
+script if we wanted to monitor them.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">az batch task file list <span style="color: #8b2252;">\</span>
+    --job-id test-job <span style="color: #8b2252;">\</span>
+    --task-id test-job-task-1 <span style="color: #8b2252;">\</span>
+    --output table
+</pre>
+</div>
+
+<p>
+Let's get those delicious hashes.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh"><span style="color: #a020f0;">for</span> i<span style="color: #a020f0;"> in</span> $(<span style="color: #ff00ff;">seq</span> 1 10); <span style="color: #a020f0;">do</span> 
+    az batch task file download <span style="color: #8b2252;">\</span>
+    --task-id test-job-task-$<span style="color: #a0522d;">i</span> <span style="color: #8b2252;">\</span>
+    --job-id test-job <span style="color: #8b2252;">\</span>
+    --destination ./test-job-task-$<span style="color: #a0522d;">i</span>-stdout.txt <span style="color: #8b2252;">\</span>
+    --file-path stdout.txt
+    cat ./test-job-task-$<span style="color: #a0522d;">i</span>-stdout.txt
+<span style="color: #a020f0;">done</span>
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org8dec3c9" class="outline-2">
+<h2 id="org8dec3c9"><span class="section-number-2">4</span> Notes About Usage</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+The environment in which jobs run needs to be customized to a
+degree. The operating system and libraries are set up ahead of time in
+Azure and we should try our best to make the linux system which hosts
+task execution as close to the virtual machines as possible.
+</p>
+
+<p>
+Jobs may need custom files.
+</p>
+
+<p>
+In order to access them you create an application, which despite its
+name, may contain things other than just executables.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">az batch application create <span style="color: #8b2252;">\</span>
+    --resource-group myResourceGroup <span style="color: #8b2252;">\</span>
+    --name mybatchaccount <span style="color: #8b2252;">\</span>
+    --application-name <span style="color: #8b2252;">"My Application"</span>
+
+<span style="color: #b22222;"># </span><span style="color: #b22222;">An application can reference multiple application executable packages</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">of different versions. The executables and any dependencies need</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">to be zipped up for the package. Once uploaded, the CLI attempts</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">to activate the package so that it's ready for use.</span>
+az batch application package create <span style="color: #8b2252;">\</span>
+    --resource-group myResourceGroup <span style="color: #8b2252;">\</span>
+    --name mybatchaccount <span style="color: #8b2252;">\</span>
+    --application-name <span style="color: #8b2252;">"My Application"</span> <span style="color: #8b2252;">\</span>
+    --package-file my-application-exe.zip <span style="color: #8b2252;">\</span>
+    --version-name 1.0
+
+<span style="color: #b22222;"># </span><span style="color: #b22222;">Update the application to assign the newly added application</span>
+<span style="color: #b22222;"># </span><span style="color: #b22222;">package as the default version.</span>
+az batch application set <span style="color: #8b2252;">\</span>
+    --resource-group myResourceGroup <span style="color: #8b2252;">\</span>
+    --name mybatchaccount <span style="color: #8b2252;">\</span>
+    --application-name <span style="color: #8b2252;">"My Application"</span> <span style="color: #8b2252;">\</span>
+    --default-version 1.0
+</pre>
+</div>
+
+<p>
+Another possibility is to use the &#x2013;resource-files switch when you
+create the task. 
+</p>
+
+<p>
+I believe we will need to configure the batch machines to mount the
+appropriate storage locations for BACPAC data if we want to do that.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge5b1ed4" class="outline-2">
+<h2 id="orge5b1ed4"><span class="section-number-2">5</span> C# version</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+You can see a similar project via C# <a href="https://github.com/Azure-Samples/batch-dotnet-ffmpeg-tutorial">here</a>.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Vincent</p>
+<p class="date">Created: 2020-11-05 Thu 15:04</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -24,3 +24,6 @@ az login
 
 Follow the instructions.
 
+Batch Basics
+------------
+
